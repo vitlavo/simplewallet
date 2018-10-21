@@ -1,0 +1,26 @@
+<div class="center">
+  <h1>Simple Wallet</h1>
+
+  <div id="transaction-errors" class="alert alert-danger" style="display: none;"></div>
+
+  <%= form_with model: @transaction, id: 'transaction-create', class: 'form-inline', url: transactions_create_path do |f| %>
+    <div class="form-row align-items-center">
+      <div class="col">
+        <%= f.collection_select(:source_wallet_id, @wallets, :id, :owner_description,
+                                { include_blank: 'Select source wallet' }, { class: 'form-control' }) %>
+      </div>
+      <%= octicon 'arrow-right', height: 40 %>
+      <div class="col">
+        <%= f.collection_select(:target_wallet_id, @wallets, :id, :owner_description,
+                                { include_blank: 'Select target wallet' }, { class: 'form-control' }) %>
+      </div>
+      <div class="col">
+        <%= f.label(:amount) %>
+      </div>
+      <div class="col">
+        <%= f.number_field(:amount, class: 'form-control', step: 0.1) %>
+      </div>
+      <%= f.submit('Send', class: 'btn btn-primary', data: { 'disable-with': 'Processing...' }) %>
+    </div>
+  <% end %>
+</div>
