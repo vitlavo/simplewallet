@@ -1,0 +1,11 @@
+user_wallet:
+  id: 1
+  balance: 10
+  walletable_id: 1
+  walletable_type: User
+
+team_wallet:
+  id: 2
+  balance: 100
+  walletable_id: 1
+  walletable_type: Team

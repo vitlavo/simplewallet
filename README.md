@@ -1,24 +1,45 @@
-# README
+# Simple wallet
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Current stack ###
+* Ruby 2.5.1
+* Rails 5.2.1
+* PostgreSQL 9.5
 
-Things you may want to cover:
 
-* Ruby version
+## Install
 
-* System dependencies
+### 1. Check out the repository
 
-* Configuration
+```shell
+git clone git@github.com:vitlavo/simplewallet.git
+```
 
-* Database creation
+### 2. Create database.yml file
 
-* Database initialization
+Copy the sample database.yml file and edit the database configuration as required.
 
-* How to run the test suite
+```shell
+cp config/database.example.yml config/database.yml
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### 3. Setup the database
 
-* Deployment instructions
+Run the following commands to setup the database.
 
-* ...
+```shell
+rails db:setup
+```
+
+### 4. Install gems
+
+```shell
+bundle install
+```
+
+### 4. Start the Rails server
+
+You can start the rails server using the command given below.
+
+```shell
+rails s
+```

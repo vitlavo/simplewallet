@@ -2,7 +2,7 @@
 
 class MainController < ApplicationController
   def index
-    @wallets      = Wallet.order(:id).all
+    @wallets      = Wallet.all
     @transaction  = Transaction.new
   end
 end
