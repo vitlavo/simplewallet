@@ -36,7 +36,7 @@ rails db:setup
 bundle install
 ```
 
-### 4. Start the Rails server
+### 5. Start the Rails server
 
 You can start the rails server using the command given below.
 
